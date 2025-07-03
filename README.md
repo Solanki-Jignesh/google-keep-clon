@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+    "Smtp": {
+    "smtpServer": "smtp.gmail.com",
+    "Port": "587",
+    "Username": "the.fitpro.team@gmail.com",
+    "Password": "smgg qlhz kpaz kwpc",
+    "EnableSsl": true,
+    "tcpClient": "gmail-smtp-in.l.google.com"
+  },
