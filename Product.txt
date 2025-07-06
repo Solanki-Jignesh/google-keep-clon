@@ -1,0 +1,23 @@
+using var transaction = await _context.Database.BeginTransactionAsync();
+
+try
+{
+    _context.Products.Add(product);
+    await _context.SaveChangesAsync();  // Get ProductId
+
+    foreach (var image in productImages)
+    {
+        image.ProductId = product.ProductId;
+        _context.ProductImages.Add(image);
+    }
+
+    await _context.SaveChangesAsync();
+    await transaction.CommitAsync();
+
+    return product.ProductId;
+}
+catch
+{
+    await transaction.RollbackAsync();
+    throw;
+}
